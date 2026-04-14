@@ -42,16 +42,16 @@
        CSS CUSTOM PROPERTIES — LIGHT & DARK THEMES
        ============================================================ */
     :root {
-      --bg: #f8f9fc;
-      --bg-card: #ffffff;
-      --bg-nav: rgba(248, 249, 252, 0.85);
+      --bg: #FAFDF5;
+      --bg-card: #FFFFF0;
+      --bg-nav: rgba(250, 253, 245, 0.92);
       --text: #1a1d23;
-      --text-muted: #5a6074;
-      --text-faint: #9aa0b4;
+      --text-muted: #4a5a50;
+      --text-faint: #8aa090;
       --accent: #2a7d6f;
       --accent-hover: #1f6059;
       --accent-light: rgba(42, 125, 111, 0.1);
-      --border: #e4e7f0;
+      --border: #c8ddd0;
       --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
       --shadow-md: 0 4px 16px rgba(0,0,0,.08);
       --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
@@ -974,6 +974,19 @@
       box-shadow: var(--shadow-sm);
     }
 
+    .edu-photo {
+      width: 100%;
+      height: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .edu-photo { display: none; }
+    }
+
     .cert-icon {
       width: 40px;
       height: 40px;
@@ -1179,7 +1192,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
         <li><a href="#education">Education</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1210,7 +1223,7 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <!-- <a href="#projects">Projects</a> -->
     <a href="#education">Education</a>
     <a href="#leadership">Leadership</a>
     <a href="#contact">Contact</a>
@@ -1279,8 +1292,6 @@
         <div class="about-grid">
           <div class="about-text reveal">
             <p class="section-label">About Me</p>
-            <h2 id="about-heading" class="section-title">A bit about who I am</h2>
-
             <p>
               I am a Sustainable Urbanism and Design student at Tulane University (expected graduation May 2027) with a professional focus on Construction Project Management. My background combines technical field experience — including internships where I utilized Procore, Bluebeam, and Excel for site logs and quality oversight — with a practical foundation in carpentry and landscape design.
             </p>
@@ -1489,7 +1500,7 @@
 
     <!-- ============================================================
          PROJECTS
-         ============================================================ -->
+         ============================================================
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <div class="container">
         <p class="section-label">Portfolio</p>
@@ -1505,26 +1516,26 @@
             PLACEHOLDER PROJECT 1
             Duplicate this block for each project. Remove comment when done.
             ================================================================
-          -->
+          - ->
           <article class="project-card">
             <div class="project-thumb">
               <!--
                 PLACEHOLDER: Replace the placeholder div below with:
                 <img src="projects/project-1-thumb.png" alt="PLACEHOLDER_PROJECT_NAME screenshot" />
                 Recommended size: 640x400px
-              -->
+              - ->
               <div class="project-thumb-placeholder">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <!-- PLACEHOLDER: Update with project name -->
+                <!-- PLACEHOLDER: Update with project name - ->
                 Project Screenshot
               </div>
 
               <div class="project-links">
-                <!-- PLACEHOLDER: Update href to live demo URL -->
+                <!-- PLACEHOLDER: Update href to live demo URL - ->
                 <a href="https://PLACEHOLDER_PROJECT_DEMO_URL" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Live demo">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 </a>
-                <!-- PLACEHOLDER: Update href to GitHub repo URL. Remove this link if the repo is private -->
+                <!-- PLACEHOLDER: Update href to GitHub repo URL. Remove this link if the repo is private - ->
                 <a href="https://github.com/ritchiew312-bit/PLACEHOLDER_REPO_NAME" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="GitHub repository">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 </a>
@@ -1532,14 +1543,14 @@
             </div>
 
             <div class="project-body">
-              <!-- PLACEHOLDER: Update with real project name -->
+              <!-- PLACEHOLDER: Update with real project name - ->
               <h3 class="project-title">PLACEHOLDER_PROJECT_NAME</h3>
-              <!-- PLACEHOLDER: Update with real project description (2–3 sentences) -->
+              <!-- PLACEHOLDER: Update with real project description (2–3 sentences) - ->
               <p class="project-desc">
                 PLACEHOLDER: Describe what this project does, what problem it solves, and what makes it interesting. Mention scale, impact, or any notable technical challenge you tackled.
               </p>
               <div class="project-tags">
-                <!-- PLACEHOLDER: Add the tech stack used for this project -->
+                <!-- PLACEHOLDER: Add the tech stack used for this project - ->
                 <span class="badge">PLACEHOLDER_TECH</span>
                 <span class="badge">PLACEHOLDER_TECH</span>
                 <span class="badge">PLACEHOLDER_TECH</span>
@@ -1547,7 +1558,7 @@
             </div>
           </article>
 
-          <!-- PLACEHOLDER PROJECT 2 -->
+          <!-- PLACEHOLDER PROJECT 2 - ->
           <article class="project-card">
             <div class="project-thumb">
               <div class="project-thumb-placeholder">
@@ -1573,7 +1584,7 @@
             </div>
           </article>
 
-          <!-- PLACEHOLDER PROJECT 3 -->
+          <!-- PLACEHOLDER PROJECT 3 - ->
           <article class="project-card">
             <div class="project-thumb">
               <div class="project-thumb-placeholder">
@@ -1602,6 +1613,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- ============================================================
          EDUCATION & CERTIFICATIONS
@@ -1609,7 +1621,7 @@
     <section id="education" class="section" aria-labelledby="education-heading">
       <div class="container">
         <p class="section-label">Background</p>
-        <h2 id="education-heading" class="section-title">Education &amp; Certifications</h2>
+        <h2 id="education-heading" class="section-title">Education</h2>
 
         <div class="edu-grid reveal-stagger">
 
@@ -1635,44 +1647,9 @@
             </div>
           </div>
 
-          <!-- Certifications column -->
+          <!-- Jobsite photo -->
           <div>
-            <h3 class="edu-section-title">Certifications</h3>
-
-            <!--
-              PLACEHOLDER: Add your real certifications. Duplicate .cert-item as needed.
-              Update the emoji icon, name, issuer, and year.
-            -->
-            <div class="cert-item">
-              <div class="cert-icon">&#9749;</div>
-              <div>
-                <!-- PLACEHOLDER: Certification name -->
-                <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
-                <!-- PLACEHOLDER: Issuing organization -->
-                <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
-              </div>
-              <!-- PLACEHOLDER: Year earned -->
-              <div class="cert-year">YYYY</div>
-            </div>
-
-            <div class="cert-item">
-              <div class="cert-icon">&#127919;</div>
-              <div>
-                <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
-                <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
-              </div>
-              <div class="cert-year">YYYY</div>
-            </div>
-
-            <div class="cert-item">
-              <div class="cert-icon">&#127775;</div>
-              <div>
-                <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
-                <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
-              </div>
-              <div class="cert-year">YYYY</div>
-            </div>
-
+            <img src="Billy_Ritchie_ConstructionTruck_Photo.jpg" alt="On the jobsite" class="edu-photo" />
           </div>
         </div>
       </div>
@@ -1914,5 +1891,48 @@
       }
     });
   </script>
+
+    <!-- ============================================================
+         CERTIFICATIONS (hidden — move back into #education .edu-grid when ready)
+         ============================================================
+    <div>
+      <h3 class="edu-section-title">Certifications</h3>
+
+      <!--
+        PLACEHOLDER: Add your real certifications. Duplicate .cert-item as needed.
+        Update the emoji icon, name, issuer, and year.
+      -->
+      <div class="cert-item">
+        <div class="cert-icon">&#9749;</div>
+        <div>
+          <!-- PLACEHOLDER: Certification name -->
+          <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
+          <!-- PLACEHOLDER: Issuing organization -->
+          <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
+        </div>
+        <!-- PLACEHOLDER: Year earned -->
+        <div class="cert-year">YYYY</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">&#127919;</div>
+        <div>
+          <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
+          <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
+        </div>
+        <div class="cert-year">YYYY</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">&#127775;</div>
+        <div>
+          <div class="cert-name">PLACEHOLDER_CERT_NAME</div>
+          <div class="cert-issuer">PLACEHOLDER_ISSUER</div>
+        </div>
+        <div class="cert-year">YYYY</div>
+      </div>
+
+    </div>
+    -->
 </body>
 </html>
